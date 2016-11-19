@@ -1,0 +1,33 @@
+{
+  "name": "ob-scene",
+  "version": "0.0.1",
+  "description": "Simple scene manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bananpermobil/ob-scene.git"
+  },
+  "keywords": [
+    "ob",
+    "obscene",
+    "simple",
+    "scene",
+    "manager",
+    "canvas",
+    "webgl",
+    "game",
+    "gamedev",
+    "gamedevelopment",
+    "scenes",
+    "scene"
+  ],
+  "author": "Fredrik Järnbröst",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bananpermobil/ob-scene/issues"
+  },
+  "homepage": "https://github.com/bananpermobil/ob-scene#readme"
+}
