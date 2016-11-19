@@ -1,1 +1,2 @@
-# ob-scene
+# Ob-Scene, A simple scene manager
+
