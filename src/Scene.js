@@ -1,4 +1,3 @@
-const log = require('debug')('ob-scene:Scene')
 
 class Scene {
   constructor(config) {
