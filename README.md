@@ -24,7 +24,11 @@ const myScene = Ob.Scene({
 
 	// this will be called when changing to this scene with changeScene('myScene', nextSceneParams)
 	// the previousSceneParams is the second argument to changeScene([scene name], nextSceneParams)
-	create: function (previousSceneParams) {},
+	create: function (previousSceneParams) {
+
+		// all scenes have access to a shared object
+		this.sharedObject.playerScore = 1000
+	},
 
 	// this will be called when changing from this scene with changeScene('anyOtherScene')
 	destroy: function () {},
@@ -54,7 +58,7 @@ const splash = new Ob.Scene({ // create new scene - 'splash'
   name: 'splash', 
   create: function () {
     console.log('splash create', this.sharedObject)
-    this.sharedObject.hej = 'hejjj'
+    this.sharedObject.playerName = 'lolbert'
   },
   destroy: function () {
     console.log('splash destroy')
@@ -70,7 +74,8 @@ const splash = new Ob.Scene({ // create new scene - 'splash'
 const game = new Ob.Scene({
   name: 'game',
   create: function () {
-    console.log('game create', this.sharedObject)
+  	// will print: 'game create, playerName: lolbert'
+    console.log('game create, playerName:', this.sharedObject.playerName) 
   },
   destroy: function () {
     console.log('game destroy')
@@ -101,6 +106,7 @@ sceneManager.draw()
 
 splash.changeScene('game')
 
+// of course update and draw will be done in your gameloop
 sceneManager.update()
 sceneManager.draw()
 sceneManager.update()
