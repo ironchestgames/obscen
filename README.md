@@ -2,7 +2,7 @@
 
 ## Overview
 
-Obscen is intended to be an easy-to-use scene manager for the smaller projects.
+**Obscen** is intended to be an easy-to-use scene manager for the smaller projects.
 
 There are two classes: SceneManager and Scene.
 
@@ -10,17 +10,7 @@ There are two classes: SceneManager and Scene.
 
 Your gameloop only need to know about a scene manager, because it will handle all your scenes.
 Your gameloop calls ```update``` and ```draw``` on the scene manager and it will pass it down to the current scene.
-Obscen is agnostic against the arguments to the ```update``` and ```draw``` calls, so it doesn't matter if you pass down deltaTime or tick multiplier or renderingContext or whatever, the scene manager will just pass it on down to the scenes.
-
-```js
-const sceneManager = new Ob.SceneManager()
-
-// the setScenes call will add a wrapped changeScene method to all scenes
-sceneManager.setScenes([
-  myScene,
-  myOtherScene,
-  ])
-```
+**Obscen** is agnostic against the arguments to the ```update``` and ```draw``` calls, so it doesn't matter if you pass down deltaTime or tick multiplier or renderingContext or whatever, the scene manager will just pass it on down to its scenes.
 
 ### class Scene
 
@@ -51,7 +41,7 @@ const myScene = Ob.Scene({
 
 Written in ES5.
 
-Only exports to CommonJS (as of now).
+Only exports to CommonJS (as of now, AMD is planned).
 
 ## Usage
 
@@ -95,6 +85,7 @@ const game = new Ob.Scene({
 
 const sceneManager = new Ob.SceneManager()
 
+// the setScenes call will add a wrapped changeScene method to all scenes, before this .changeScene does not work
 sceneManager.setScenes([
   splash,
   game,
@@ -120,15 +111,19 @@ game.changeScene('splash')
 
 ### Debugging
 
-Obscen uses [debug](https://www.npmjs.com/package/debug). Obscen follows debug conventions.
+**Obscen** uses [debug](https://www.npmjs.com/package/debug) and follows its conventions.
 
 ```js
-localStorage.debug = 'ob-scene:*'
+localStorage.debug = 'obscen:*'
 ```
 
 ## Dependencies
 
-- [debug](https://www.npmjs.com/package/debug)
+[debug](https://www.npmjs.com/package/debug)
+
+## Contributing
+
+Please feel free to put up PR's, this is very infant and hobbyish still so don't be mad if it might take a while to get a reply.
 
 ## To do
 
