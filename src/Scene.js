@@ -9,7 +9,7 @@ class Scene {
     this.ownDestroy = config.destroy
   }
   changeScene(sceneName, nextSceneParams) {
-    this.sceneManager.changeScene(sceneName, nextSceneParams)
+    // will be overridden by SceneManager
   }
   create() {
     this.ownCreate && this.ownCreate.apply(this, arguments)

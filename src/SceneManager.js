@@ -6,7 +6,7 @@ class SceneManager {
     this.currentScene = null
   }
   changeScene(sceneName, nextSceneParams) {
-    log(`changeScene - sceneName: '${sceneName}' - nextSceneParams:, nextSceneParams`)
+    log(`changeScene - sceneName: '${sceneName}' - nextSceneParams: ${nextSceneParams}`)
 
     nextSceneParams = nextSceneParams || {}
     if (this.currentScene) {
@@ -32,7 +32,7 @@ class SceneManager {
     this.scenes = scenes
 
     this.scenes.forEach(function (scene) {
-      scene.sceneManager = this
+      scene.changeScene = this.changeScene.bind(this)
     }.bind(this))
   }
   update() {
