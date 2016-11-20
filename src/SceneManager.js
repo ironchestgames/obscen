@@ -30,8 +30,10 @@ class SceneManager {
     }
 
     this.scenes = scenes
+    const sharedObject = {}
 
     this.scenes.forEach(function (scene) {
+      scene.sharedObject = sharedObject
       scene.changeScene = this.changeScene.bind(this)
     }.bind(this))
   }
