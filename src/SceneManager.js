@@ -1,4 +1,4 @@
-const log = require('debug')('ob-scene:SceneManager')
+const log = require('debug')('obscen:SceneManager')
 
 class SceneManager {
   constructor() {
