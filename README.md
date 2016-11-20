@@ -1,3 +1,3 @@
-# Ob-Scene, A simple scene manager
+# Obscen, A simple scene manager
 
 ES5
