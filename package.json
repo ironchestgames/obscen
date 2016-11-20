@@ -1,5 +1,5 @@
 {
-  "name": "ob-scene",
+  "name": "obscen",
   "version": "0.0.1",
   "description": "Simple scene manager",
   "main": "index.js",
@@ -11,18 +11,18 @@
     "url": "git+https://github.com/bananpermobil/ob-scene.git"
   },
   "keywords": [
+    "obscen",
     "ob",
     "obscene",
     "simple",
+    "scene manager",
     "scene",
     "manager",
-    "canvas",
-    "webgl",
     "game",
     "gamedev",
     "gamedevelopment",
-    "scenes",
-    "scene"
+    "game development",
+    "scenes"
   ],
   "author": "Fredrik Järnbröst",
   "license": "ISC",
